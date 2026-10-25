@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sistem Perhitungan Biaya Laundry | UTS Alpro SSI1144</title>
+<meta name="description" content="Dokumentasi proyek UTS Algoritma dan Pengantar Pemrograman, Studi Kasus 02: Sistem Perhitungan Biaya Laundry.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10.9.1/dist/mermaid.min.js"></script>
+<style>
+:root{--ink:#10243a;--bg:#f2f6f8;--panel:#fff;--accent:#0a7ea4;--soft:#dbe9ef;--line:#c9d9e1;--code:#0f1c2b;--mono:'IBM Plex Mono',monospace;--sans:'Bricolage Grotesque',system-ui,sans-serif}
+*{box-sizing:border-box}
+html{scroll-padding-top:1rem}
+body{margin:0;font-family:var(--sans);color:var(--ink);background:var(--bg);line-height:1.6;display:grid;grid-template-columns:270px 1fr;min-height:100vh}
+nav{background:var(--ink);color:#e7f1f6;padding:1.5rem 1.1rem;position:sticky;top:0;height:100vh;overflow-y:auto}
+nav h1{font-size:1.25rem;font-weight:800;line-height:1.2;margin:0 0 .3rem}
+nav p{font-size:.85rem;margin:0 0 1.2rem;color:#a9c3d0}
+nav h2{font-size:.95rem;font-weight:600;margin:1.1rem 0 .3rem;color:#fff}
+nav a{display:block;color:#bcd3de;text-decoration:none;font-size:.9rem;padding:.2rem .6rem;border-left:2px solid #2d4a63;margin-left:.2rem}
+nav a:hover,nav a:focus-visible{color:#fff;border-left-color:#7fd1ee;outline:none}
+nav a.on{color:#fff;border-left-color:#7fd1ee;background:#1a3550}
+main{padding:2rem clamp(1rem,4vw,3.5rem);max-width:980px;width:100%}
+#doc{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:1.5rem clamp(1rem,3vw,2.5rem);overflow-wrap:break-word}
+#doc h1{font-size:2rem;font-weight:800;line-height:1.15;margin-top:0}
+#doc h2{font-size:1.35rem;margin-top:2rem;border-bottom:1px solid var(--line);padding-bottom:.25rem}
+#doc h3{font-size:1.1rem}
+#doc p,#doc li{max-width:75ch}
+#doc code{font-family:var(--mono);font-size:.88em;background:var(--soft);padding:.1em .35em;border-radius:3px}
+#doc pre{background:var(--code);color:#e3edf3;padding:1rem;border-radius:5px;overflow-x:auto}
+#doc pre code{background:none;padding:0;color:inherit}
+#doc pre.mermaid{background:#fff;color:var(--ink);border:1px solid var(--line);text-align:center}
+#doc img{max-width:100%;border-radius:4px;border:1px solid var(--line)}
+#doc .tw{overflow-x:auto;margin:1rem 0}
+#doc table{border-collapse:collapse;font-size:.9rem;min-width:100%}
+#doc th,#doc td{border:1px solid var(--line);padding:.4rem .6rem;vertical-align:top}
+#doc th{background:var(--soft);text-align:left}
+#doc a{color:var(--accent)}
+#doc blockquote{margin:1rem 0;padding:.4rem 1rem;border-left:4px solid var(--accent);background:#eef6f9}
+@media(max-width:800px){body{grid-template-columns:1fr}nav{position:static;height:auto}}
+@media(prefers-reduced-motion:no-preference){#doc{transition:opacity .15s}}
+</style>
+</head>
+<body>
+<nav aria-label="Navigasi dokumentasi">
+  <h1>Sistem Perhitungan Biaya Laundry</h1>
+  <p>UTS Alpro SSI1144 · Universitas Ma Chung</p>
+  <div id="menu"></div>
+</nav>
+<main><article id="doc">Memuat dokumen...</article></main>
+<script>
+const MENU = [
+  ["Beranda", [["Beranda","beranda.md"]]],
+  ["Analisis Masalah", [["Analisis masalah, IPO, variabel","Analisis-Masalah/analisis_masalah.md"]]],
+  ["Modul A (Nur Adyatma Pratama)", [
+    ["Algoritma deskriptif","Modul-A/algoritma_deskriptif.md"],["Pseudocode","Modul-A/pseudocode.md"],["Flowchart","Modul-A/flowchart.md"],
+    ["Source code dan penjelasan","Modul-A/source_code_dan_penjelasan.md"],["Hasil eksekusi dan pengujian","Modul-A/hasil_eksekusi_dan_pengujian.md"]]],
+  ["Modul B (Khoirun Ni'mah)", [
+    ["Algoritma deskriptif","Modul-B/algoritma_deskriptif.md"],["Pseudocode","Modul-B/pseudocode.md"],["Flowchart","Modul-B/flowchart.md"],
+    ["Source code dan penjelasan","Modul-B/source_code_dan_penjelasan.md"],["Hasil eksekusi dan pengujian","Modul-B/hasil_eksekusi_dan_pengujian.md"]]],
+  ["Program Terintegrasi", [
+    ["Proses integrasi","Integrasi/proses_integrasi.md"],["Pseudocode","Integrasi/pseudocode.md"],["Flowchart","Integrasi/flowchart.md"],
+    ["Source code final","Integrasi/source_code_dan_penjelasan.md"],["Hasil eksekusi, pengujian, trace table","Integrasi/hasil_eksekusi_dan_pengujian.md"],
+    ["Daftar kesalahan dan perbaikan","Integrasi/daftar_kesalahan_dan_perbaikan.md"]]],
+  ["Refleksi", [["Refleksi kelompok","Refleksi/refleksi.md"]]],
+  ["Pernyataan Penggunaan AI", [["Pernyataan penggunaan AI","Refleksi/pernyataan_penggunaan_ai.md"]]]
+];
+const menu = document.getElementById('menu'), doc = document.getElementById('doc');
+MENU.forEach(([g, items]) => {
+  const h = document.createElement('h2'); h.textContent = g; menu.appendChild(h);
+  items.forEach(([t, p]) => { const a = document.createElement('a'); a.href = '#' + p; a.textContent = t; a.dataset.p = p; menu.appendChild(a); });
+});
+mermaid.initialize({startOnLoad:false, theme:'neutral', flowchart:{useMaxWidth:true}});
+async function load() {
+  const path = decodeURIComponent(location.hash.slice(1)) || 'beranda.md';
+  const dir = path.includes('/') ? path.slice(0, path.lastIndexOf('/') + 1) : '';
+  menu.querySelectorAll('a').forEach(a => a.classList.toggle('on', a.dataset.p === path));
+  try {
+    const res = await fetch(path);
+    if (!res.ok) throw new Error(res.status);
+    const html = marked.parse(await res.text());
+    doc.innerHTML = html;
+    doc.querySelectorAll('code.language-mermaid').forEach(c => { const pre = c.parentElement; pre.className = 'mermaid'; pre.textContent = c.textContent; });
+    doc.querySelectorAll('img').forEach(i => { const s = i.getAttribute('src'); if (!/^(https?:|\/|data:)/.test(s)) i.src = dir + s; });
+    doc.querySelectorAll('table').forEach(t => { const w = document.createElement('div'); w.className = 'tw'; t.replaceWith(w); w.appendChild(t); });
+    await mermaid.run({nodes: doc.querySelectorAll('pre.mermaid')});
+    document.title = (doc.querySelector('h1') ? doc.querySelector('h1').textContent + ' | ' : '') + 'Biaya Laundry UTS Alpro';
+  } catch (e) {
+    doc.innerHTML = '<h1>Dokumen tidak ditemukan</h1><p>Berkas <code>' + path + '</code> tidak bisa dimuat. Buka halaman ini lewat GitHub Pages (bukan langsung dari berkas lokal), lalu pilih dokumen dari menu.</p>';
+  }
+  window.scrollTo(0, 0);
+}
+window.addEventListener('hashchange', load);
+load();
+</script>
+</body>
+</html>
