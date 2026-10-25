@@ -6,13 +6,13 @@
 - **Mata kuliah:** Algoritma dan Pengantar Pemrograman (SSI1144)
 - **Studi kasus 02:** Sistem Perhitungan Biaya Laundry
 - **Bahasa:** C++ (konsol)
-- **Repository:** https://github.com/GANTI-USERNAME/laundry_alpro
-- **GitHub Pages:** https://GANTI-USERNAME.github.io/laundry_alpro/
+- **Repository:** https://github.com/khoirun-nimah/laundry-utsalpro.git
+- **GitHub Pages:** https://khoirun-nimah.github.io/laundry-utsalpro/
 
 | No | Nama | NIM | Tanggung jawab utama |
 |:-:|---|:-:|---|
-| 1 | Nur Adyatma Pratama | 322610016 | Modul A (proses utama) |
-| 2 | Khoirun Ni'mah | 322610007 | Modul B (rekapitulasi) |
+| 1 | Khoirun Ni'mah | 322610007 | Modul A (proses utama) |
+| 2 | Nur Adyatma Pratama | 322610016 | Modul B (rekapitulasi) |
 
 ## Deskripsi
 
@@ -36,12 +36,12 @@ laundry_alpro/
 ├── index.html                      # halaman GitHub Pages
 ├── .gitignore
 ├── Analisis-Masalah/analisis_masalah.md
-├── Modul-A/                        # Nur Adyatma Pratama
+├── Modul-A/                        # Khoirun Ni'mah
 │   ├── algoritma_deskriptif.md  pseudocode.md  flowchart.md
 │   ├── modul_a.cpp
 │   ├── source_code_dan_penjelasan.md  hasil_eksekusi_dan_pengujian.md
 │   └── gambar/
-├── Modul-B/                        # Khoirun Ni'mah
+├── Modul-B/                        # Nur Adyatma Pratama
 │   └── (isi sama, dengan modul_b.cpp)
 ├── Integrasi/
 │   ├── program_terintegrasi.cpp
@@ -59,8 +59,8 @@ laundry_alpro/
 Butuh compiler C++ (g++/MinGW/Clang).
 
 ```bash
-git clone https://github.com/GANTI-USERNAME/laundry_alpro.git
-cd laundry_alpro/Integrasi
+git clone https://github.com/khoirun-nimah/laundry-utsalpro.git
+cd laundry_utsalpro/Integrasi
 g++ program_terintegrasi.cpp -o program_terintegrasi
 ./program_terintegrasi          # Windows: program_terintegrasi.exe
 ```
