@@ -158,16 +158,16 @@ int main() {
 
 ## Penjelasan Bagian Penting
 
-| Bagian kode                                                                      | Fungsi                                                                                                                            |
-| -------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| Konstanta (`const int ...`)                                                      | Menyimpan tarif, batas, dan persen diskon di satu tempat. Jika ketentuan berubah (misalnya tarif express), cukup ubah satu baris. |
-| Perulangan `do ... while (lanjut)`                                               | Memproses pelanggan berulang sampai pengguna menjawab `t`.                                                                        |
-| Perulangan `while (true)` pada input                                             | Mengulang pertanyaan sampai data valid, sehingga program tidak berhenti saat input salah.                                         |
-| `cin >> x && cin.peek() == '\n'`                                                 | Memastikan baris input hanya berisi angka. Input seperti `abc` atau `3abc` ditolak.                                               |
-| `beratTagihan = (int)beratInput; if (beratInput > beratTagihan) beratTagihan++;` | Pembulatan ke atas tanpa library tambahan. Contoh: 4,2 menjadi 5; 5,0 tetap 5.                                                    |
-| `if (beratTagihan < BERAT_MINIMUM)`                                              | Berat di bawah 2 kg tetap ditagih 2 kg.                                                                                           |
-| `if (anggota && beratTagihan >= 5) ... else if (!anggota && beratTagihan >= 10)` | Menentukan diskon 5% atau 3% atau 0%. Operator logika `&&` dan `!` dipakai di sini.                                               |
-| `totalBayar = biayaLayanan - nominalDiskon + biayaAntar`                         | Diskon hanya mengurangi biaya layanan. Biaya antar ditambahkan setelahnya sehingga tidak terdiskon.                               |
+| Bagian kode | Fungsi |
+|---|---|
+| Konstanta (`const int ...`) | Menyimpan tarif, batas, dan persen diskon di satu tempat. Jika ketentuan berubah (misalnya tarif express), cukup ubah satu baris. |
+| Perulangan `do ... while (lanjut)` | Memproses pelanggan berulang sampai pengguna menjawab `t`. |
+| Perulangan `while (true)` pada input | Mengulang pertanyaan sampai data valid, sehingga program tidak berhenti saat input salah. |
+| `cin >> x && cin.peek() == '\n'` | Memastikan baris input hanya berisi angka. Input seperti `abc` atau `3abc` ditolak. |
+| `beratTagihan = (int)beratInput; if (beratInput > beratTagihan) beratTagihan++;` | Pembulatan ke atas tanpa library tambahan. Contoh: 4,2 menjadi 5; 5,0 tetap 5. |
+| `if (beratTagihan < BERAT_MINIMUM)` | Berat di bawah 2 kg tetap ditagih 2 kg. |
+| `if (anggota && beratTagihan >= 5) ... else if (!anggota && beratTagihan >= 10)` | Menentukan diskon 5% atau 3% atau 0%. Operator logika `&&` dan `!` dipakai di sini. |
+| `totalBayar = biayaLayanan - nominalDiskon + biayaAntar` | Diskon hanya mengurangi biaya layanan. Biaya antar ditambahkan setelahnya sehingga tidak terdiskon. |
 
 ### Rekapitulasi tanpa array
 
